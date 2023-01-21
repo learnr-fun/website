@@ -7,3 +7,7 @@ About this site
 ```{r}
 1 + 1
 ```
+
+## Authoring Techniques
+
+You may have a lot of needs for Document authoring features. Almost all of them ca be [demonstrated here](authoring.qmd).

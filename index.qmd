@@ -9,3 +9,7 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 ```{r}
 1 + 1
 ```
+
+## Computation in Quarto Markdown
+
+Let's [see this file](computations.qmd), it has a computation and graph to show.

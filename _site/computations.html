@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>learnr.fun - เว็บง่ายๆ ใช้ R ทำงานและทำเงิน - LearnR &gt; About</title>
+<title>learnr.fun - เว็บง่ายๆ ใช้ R ทำงานและทำเงิน - Quarto Computations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,7 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">
+    <a class="nav-link" href="./about.html">
  <span class="menu-text">LearnR &gt; About</span></a>
   </li>  
   <li class="nav-item">
@@ -165,20 +165,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#authoring-techniques" id="toc-authoring-techniques" class="nav-link active" data-scroll-target="#authoring-techniques">Authoring Techniques</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">LearnR &gt; About</h1>
+<h1 class="title">Quarto Computations</h1>
 </div>
 
 
@@ -193,19 +187,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>About this site</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+
+</div>
+<p>There are 234 observations in our data.</p>
+<div class="cell">
+
+</div>
+<p>The average city mileage of the cars in our data is 16.86 and the average highway mileage is 23.44.</p>
+<p>The plots in Figure <a href="#fig-mpg">Figure&nbsp;1</a> show the relationship between city and highway mileage for 38 popular models of cars. In Figure <a href="#fig-mpg-1">Figure&nbsp;1 (a)</a> the points are colored by the number of cylinders while in Figure <a href="#fig-mpg-2">Figure&nbsp;1 (b)</a> the points are colored by engine displacement.</p>
+<div class="page-columns page-full">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> displ)) <span class="sc">+</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">option =</span> <span class="st">"E"</span>) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-mpg" class="cell column-page quarto-layout-panel" data-hash="computations_cache/html/fig-mpg_02f9baca9b2cfccbfe710b0cd7d1fb47">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-mpg-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="computations_files/figure-html/fig-mpg-1.png" class="img-fluid figure-img" data-ref-parent="fig-mpg" width="672"></p>
+<p></p><figcaption class="figure-caption">(a) Color by number of cylinders</figcaption><p></p>
+</figure>
 </div>
 </div>
-<section id="authoring-techniques" class="level2">
-<h2 class="anchored" data-anchor-id="authoring-techniques">Authoring Techniques</h2>
-<p>You may have a lot of needs for Document authoring features. Almost all of them ca be <a href="authoring.qmd">demonstrated here</a>.</p>
+<div class="cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-mpg-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="computations_files/figure-html/fig-mpg-2.png" class="img-fluid figure-img" data-ref-parent="fig-mpg" width="672"></p>
+<p></p><figcaption class="figure-caption">(b) Color by engine displacement, in liters</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: City and highway mileage for 38 popular models of cars.</figcaption><p></p>
+</figure>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
