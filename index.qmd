@@ -4,6 +4,8 @@ title: "LearnR > Home"
 
 This is a Quarto website.
 
+**สำคัญมาก!** อย่าลืมคลิกดูเมนูต่างๆ เพราะสร้างมาจาก **RMarkdown** (*Quarto version*)
+
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{r}

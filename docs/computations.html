@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>learnr.fun - เว็บง่ายๆ ใช้ R ทำงานและทำเงิน - Quarto Computations</title>
+<title>learnr.fun - ใช้ R เว็บง่ายๆ - Quarto Computations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">learnr.fun - เว็บง่ายๆ ใช้ R ทำงานและทำเงิน</span>
+    <span class="navbar-title">learnr.fun - ใช้ R เว็บง่ายๆ</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -148,11 +148,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html">
- <span class="menu-text">LearnR &gt; About</span></a>
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./hello.html">
- <span class="menu-text">Helo World</span></a>
+ <span class="menu-text">Hello</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./computations.html" aria-current="page">
+ <span class="menu-text">Computations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./authoring.html">
+ <span class="menu-text">Authroing</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -197,8 +205,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The average city mileage of the cars in our data is 16.86 and the average highway mileage is 23.44.</p>
 <p>The plots in Figure <a href="#fig-mpg">Figure&nbsp;1</a> show the relationship between city and highway mileage for 38 popular models of cars. In Figure <a href="#fig-mpg-1">Figure&nbsp;1 (a)</a> the points are colored by the number of cylinders while in Figure <a href="#fig-mpg-2">Figure&nbsp;1 (b)</a> the points are colored by engine displacement.</p>
 <div class="page-columns page-full">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cty, <span class="at">color =</span> cyl)) <span class="sc">+</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
@@ -208,7 +214,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">option =</span> <span class="st">"E"</span>) <span class="sc">+</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div id="fig-mpg" class="cell column-page quarto-layout-panel" data-hash="computations_cache/html/fig-mpg_02f9baca9b2cfccbfe710b0cd7d1fb47">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">

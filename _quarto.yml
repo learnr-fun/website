@@ -3,14 +3,19 @@ project:
   output-dir: docs
 
 website:
-  title: "learnr.fun - เว็บง่ายๆ ใช้ R ทำงานและทำเงิน"
+  title: "learnr.fun - ใช้ R เว็บง่ายๆ"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
       - href: hello.qmd
-        text: Helo World
+        text: Hello
+      - href: computations.qmd
+        text: Computations
+      - href: authoring.qmd
+        text: Authroing
 
 format:
   html:
