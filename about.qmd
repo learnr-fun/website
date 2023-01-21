@@ -11,3 +11,9 @@ About this site
 ## Authoring Techniques
 
 You may have a lot of needs for Document authoring features. Almost all of them ca be [demonstrated here](authoring.qmd).
+
+### MS Word and PDF formats
+
+-   check this [MS Word file](_site/authoring.docx)
+
+-   and this [PDF file](_site/authoring.pdf)
