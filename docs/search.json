@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "LearnR > About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "about.html#authoring-techniques",
+    "href": "about.html#authoring-techniques",
+    "title": "LearnR > About",
+    "section": "Authoring Techniques",
+    "text": "Authoring Techniques\nYou may have a lot of needs for Document authoring features. Almost all of them ca be demonstrated here.\n\nMS Word and PDF formats\n\ncheck this MS Word file\nand this PDF file"
+  },
+  {
+    "objectID": "computations.html",
+    "href": "computations.html",
+    "title": "Quarto Computations",
+    "section": "",
+    "text": "There are 234 observations in our data.\n\n\n\nThe average city mileage of the cars in our data is 16.86 and the average highway mileage is 23.44.\nThe plots in Figure Figure 1 show the relationship between city and highway mileage for 38 popular models of cars. In Figure Figure 1 (a) the points are colored by the number of cylinders while in Figure Figure 1 (b) the points are colored by engine displacement.\n\n\nCode\nggplot(mpg, aes(x = hwy, y = cty, color = cyl)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c() +\n  theme_minimal()\n\nggplot(mpg, aes(x = hwy, y = cty, color = displ)) +\n  geom_point(alpha = 0.5, size = 2) +\n  scale_color_viridis_c(option = \"E\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n(a) Color by number of cylinders\n\n\n\n\n\n\n\n(b) Color by engine displacement, in liters\n\n\n\n\nFigure 1: City and highway mileage for 38 popular models of cars."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LearnR > Home",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "index.html#computation-in-quarto-markdown",
+    "href": "index.html#computation-in-quarto-markdown",
+    "title": "LearnR > Home",
+    "section": "Computation in Quarto Markdown",
+    "text": "Computation in Quarto Markdown\nLet’s see this file, it has a computation and graph to show."
+  },
+  {
+    "objectID": "hello.html",
+    "href": "hello.html",
+    "title": "Penguins, meet Quarto!",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "hello.html#meet-the-penguins",
+    "href": "hello.html#meet-the-penguins",
+    "title": "Penguins, meet Quarto!",
+    "section": "Meet the penguins",
+    "text": "Meet the penguins\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins."
+  },
+  {
+    "objectID": "hello.html#ทดสอบภาษาไทย",
+    "href": "hello.html#ทดสอบภาษาไทย",
+    "title": "Penguins, meet Quarto!",
+    "section": "ทดสอบภาษาไทย",
+    "text": "ทดสอบภาษาไทย\nโอเค ใช้ภาษาไทยก็ทำได้อยู่ แต่ปัญหาสระวรรณยุกต์บนล่างทำให้ cursor ตำแหน่งเพี้ยนไปคงทำให้พิมพ์ในนี้ตรงๆ ยากนิด"
+  },
+  {
+    "objectID": "authoring.html",
+    "href": "authoring.html",
+    "title": "Housing Prices",
+    "section": "",
+    "text": "In this analysis, we build a model predicting sale prices of houses based on data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020. Let’s start by loading the packages we’ll use for the analysis.\n\nlibrary(openintro)  # for data\nlibrary(tidyverse)  # for data wrangling and visualization\nlibrary(knitr)      # for tables\nlibrary(broom)      # for model summary\n\nWe present the results of exploratory data analysis in Section 2 and the regression model in Section 3.\nWe’re going to do this analysis using literate programming (Knuth 1984)."
+  },
+  {
+    "objectID": "authoring.html#sec-eda",
+    "href": "authoring.html#sec-eda",
+    "title": "Housing Prices",
+    "section": "2 Exploratory data analysis",
+    "text": "2 Exploratory data analysis\nThe data contains 98 houses. As part of the exploratory analysis let’s visualize and summarize the relationship between areas and prices of these houses.\n\n2.1 Data visualization\nFigure 1 shows two histograms displaying the distributions of price and area individually.\n\nggplot(duke_forest, aes(x = price)) +\n  geom_histogram(binwidth = 50000) +\n  labs(title = \"Histogram of prices\")\n\nggplot(duke_forest, aes(x = area)) +\n  geom_histogram(binwidth = 250) +\n  labs(title = \"Histogram of areas\")\n\n\n\n\n\n\n\n(a) Histogram of prices\n\n\n\n\n\n\n\n(b) Histogram of areas\n\n\n\n\nFigure 1: Histograms of individual variables\n\n\n\nFigure 2 displays the relationship between these two variables in a scatterplot.\n\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point() +\n  labs(title = \"Price and area of houses in Duke Forest\")\n\n\n\n\nFigure 2: Scatterplot of price vs. area of houses in Duke Forest\n\n\n\n\n\n\n2.2 Summary statistics\nTable 1 displays basic summary statistics for these two variables.\n\nduke_forest %>%\n  summarise(\n    `Median price` = median(price),\n    `IQR price` = IQR(price),\n    `Median area` = median(area),\n    `IQR area` = IQR(area),\n    `Correlation, r` = cor(price, area)\n    ) %>%\n  kable(digits = c(0, 0, 0, 0, 2))\n\n\n\nTable 1: Summary statistics for price and area of houses in Duke Forest\n\n\nMedian price\nIQR price\nMedian area\nIQR area\nCorrelation, r\n\n\n\n\n540000\n193125\n2623\n1121\n0.67"
+  },
+  {
+    "objectID": "authoring.html#sec-model",
+    "href": "authoring.html#sec-model",
+    "title": "Housing Prices",
+    "section": "3 Modeling",
+    "text": "3 Modeling\nWe can fit a simple linear regression model of the form shown in Equation 1.\n\nprice = \\hat{\\beta}_0 + \\hat{\\beta}_1 \\times area + \\epsilon\n\\tag{1}\nTable 2 shows the regression output for this model.\n\nprice_fit <- lm(price ~ area, data = duke_forest)\n  \nprice_fit %>%\n  tidy() %>%\n  kable(digits = c(0, 0, 2, 2, 2))\n\n\n\nTable 2: Linear regression model for predicting price from area\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n116652\n53302.46\n2.19\n0.03\n\n\narea\n159\n18.17\n8.78\n0.00\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis is a pretty incomplete analysis, but hopefully the document provides a good overview of some of the authoring features of Quarto!"
+  }
+]

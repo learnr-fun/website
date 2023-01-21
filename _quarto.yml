@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "learnr.fun - เว็บง่ายๆ ใช้ R ทำงานและทำเงิน"

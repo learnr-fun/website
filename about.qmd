@@ -14,6 +14,6 @@ You may have a lot of needs for Document authoring features. Almost all of them 
 
 ### MS Word and PDF formats
 
--   check this [MS Word file](_site/authoring.docx)
+-   check this [MS Word file](authoring.docx)
 
--   and this [PDF file](_site/authoring.pdf)
+-   and this [PDF file](authoring.pdf)
