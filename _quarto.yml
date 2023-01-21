@@ -15,7 +15,7 @@ website:
       - href: computations.qmd
         text: Computations
       - href: authoring.qmd
-        text: Authroing
+        text: Authoring
 
 format:
   html:
